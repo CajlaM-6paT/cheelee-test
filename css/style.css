@@ -1,0 +1,358 @@
+@charset "UTF-8";
+:root {
+  --index: calc(1vh + 1vh);
+  --font18: calc(var(--index) * 1);
+  --font26: calc(var(--index) * 1.47);
+  --font72: calc(var(--index) * 4);
+  --accent_color: #01FFC2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #140132;
+  font-size: var(--font18);
+}
+
+.container {
+  height: inherit;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #140132;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: #140132;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  width: 6%;
+}
+header .logo img {
+  width: 100%;
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+header .nav a {
+  text-decoration: none;
+  color: #5E636E;
+}
+header .nav a:nth-last-of-type(1) {
+  font-weight: 700;
+  font-size: calc(var(--index) * 0.9);
+  color: var(--accent_color);
+}
+header .other {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .other .currency {
+  display: flex;
+  gap: 20px;
+}
+header .other .currency .currBlock {
+  display: flex;
+  gap: 5px;
+}
+header .other .currency .currBlock .currLogo img {
+  height: 100%;
+}
+header .other .currency .currBlock .currStat p {
+  font-size: calc(var(--index) * 0.5);
+  font-weight: 400;
+}
+header .other .currency .currBlock .currStat p:nth-last-of-type(1) {
+  font-weight: 700;
+  display: flex;
+  font-size: calc(var(--index) * 0.9);
+  gap: 2px;
+}
+header .other .currency .currBlock .currStat p:nth-last-of-type(1) span {
+  display: inline-flex;
+}
+header .other .certik img {
+  width: 100%;
+}
+header .other .language {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+  color: #5E636E;
+}
+
+#main {
+  height: calc(100vh - 100px);
+  min-height: auto;
+}
+#main .container {
+  background-image: url(../media/экран-для-сайта-4-деск\ 1.png);
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+}
+#main .container .titleLine .titleMain p:first-of-type {
+  font-weight: 900;
+  font-size: calc(var(--index) * 3.2);
+}
+#main .container .titleLine .titleMain p:first-of-type span {
+  color: var(--accent_color);
+}
+#main .container .titleLine .titleMain p:last-of-type {
+  font-size: calc(var(--index) * 1.47);
+  font-weight: 700;
+}
+#main .container .titleLine .appBlock {
+  position: absolute;
+  bottom: 10%;
+}
+#main .container .titleLine .appBlock img {
+  background: rgba(113, 86, 253, 0.2);
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+#main .container .titleLine .appBlock p {
+  font-weight: 700;
+  font-size: calc(var(--index) * 1.1);
+}
+#main .container .socialLine {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#main .container .socialLine img {
+  background: rgba(113, 86, 253, 0.2);
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+#info .container {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 99px;
+  justify-content: unset;
+}
+#info .container .missionBlock {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#info .container .missionBlock h1 {
+  font-size: var(--font72);
+}
+#info .container .missionBlock h1 span {
+  color: var(--accent_color);
+}
+#info .container .missionBlock .missionText {
+  display: flex;
+  gap: 24px;
+}
+#info .container .missionBlock .missionText p {
+  width: 550px;
+  text-wrap: pretty;
+  font-size: var(--font26);
+  font-weight: 400;
+}
+#info .container .missionBlock .missionText p span {
+  font-weight: 700;
+}
+#info .container .missionBlock h2 {
+  font-size: var(--font26);
+}
+#info .container .missionBlock h2 span:first-of-type {
+  color: var(--accent_color);
+}
+#info .container .missionBlock .AttentionEconomy {
+  display: flex;
+  gap: 24px;
+}
+#info .container .missionBlock .AttentionEconomy .textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#info .container .missionBlock .AttentionEconomy .textColumn p {
+  width: 550px;
+  font-size: var(--font18);
+  text-wrap: pretty;
+}
+#info .container .missionBlock .AttentionEconomy .textColumn p span {
+  font-weight: 700;
+}
+#info .container .instructions {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+#info .container .instructions .instructionsGrid {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.55fr 0.55fr 0.9fr;
+  grid-template-rows: 0.6fr 1fr 1fr;
+  gap: 10px 100px;
+  grid-template-areas: "point1 point2 point3" "point6 point6 point4" "point6 point6 point5";
+}
+#info .container .instructions .instructionsGrid .point1 {
+  grid-area: point1;
+  display: flex;
+  flex-direction: column;
+}
+#info .container .instructions .instructionsGrid .point2 {
+  grid-area: point2;
+}
+#info .container .instructions .instructionsGrid .point3 {
+  grid-area: point3;
+  width: 70%;
+}
+#info .container .instructions .instructionsGrid .point4 {
+  grid-area: point4;
+}
+#info .container .instructions .instructionsGrid .point5 {
+  grid-area: point5;
+}
+#info .container .instructions .instructionsGrid .point5 p:last-of-type {
+  font-size: var(--font18);
+  font-weight: 400;
+}
+#info .container .instructions .instructionsGrid .point5 p:last-of-type span {
+  font-weight: 700;
+}
+#info .container .instructions .instructionsGrid .point6 {
+  grid-area: point6;
+}
+#info .container .instructions .instructionsGrid .point6 img {
+  width: 100%;
+  height: 100%;
+}
+#info .container .instructions .instructionsGrid .pointNumber {
+  font-weight: 900;
+  color: rgba(113, 86, 253, 0.2);
+  font-size: calc(var(--index) * 5.5);
+}
+#info .container .instructions .instructionsGrid .pointDesc {
+  font-size: var(--font26);
+  font-weight: 700;
+  line-height: 38px;
+}
+#info .container .instructions .instructionsGrid .pointDesc span {
+  color: var(--accent_color);
+}
+#info .container .instructions .instructionsGrid .additionalDesc {
+  position: relative;
+  display: flex;
+  width: 60%;
+}
+#info .container .instructions .instructionsGrid .additionalDesc p {
+  line-height: 25px;
+  padding-bottom: calc(var(--index) * 2.2);
+}
+#info .container .instructions .instructionsGrid .additionalDesc img {
+  position: absolute;
+  right: -3em;
+  top: -10px;
+  width: 5em;
+}
+#info .container .freeBoxes {
+  display: flex;
+}
+#info .container .freeBoxes .boxTitle {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+#info .container .freeBoxes .boxTitle h1 {
+  font-size: var(--font72);
+}
+#info .container .freeBoxes .boxTitle h1 span {
+  color: var(--accent_color);
+}
+#info .container .freeBoxes .boxTitle p {
+  font-size: var(--font18);
+  line-height: 33px;
+}
+#info .container .presale {
+  width: 100%;
+}
+#info .container .presale .presaleInner {
+  position: relative;
+  z-index: 2;
+  height: 187px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(113, 86, 251, 0.2) 0%, rgba(255, 13, 255, 0.2) 100%);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#info .container .presale .presaleInner p {
+  font-size: var(--font26);
+  font-weight: 700;
+}
+#info .container .presale .presaleInner p span {
+  color: var(--accent_color);
+}
+#info .container .presale .presaleInner button {
+  background-color: #7156FB;
+  padding: 28px 48px;
+  font-size: calc(var(--index) * 1.2);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+#info .container .presaleBorder {
+  position: absolute;
+  bottom: 0;
+  height: 191px;
+  z-index: 1;
+}
+#info .container .presaleBorder img {
+  width: 100%;
+}
+
+#last .container {
+  justify-content: center;
+}
+#last .container .lastFrame {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+#last .container .lastFrame .lastTitle h2 {
+  font-weight: 900;
+  font-size: var(--font26);
+}
+#last .container .lastFrame .lastTitle h2 span {
+  color: var(--accent_color);
+}
+#last .container .lastFrame img {
+  width: 70%;
+}/*# sourceMappingURL=style.css.map */
